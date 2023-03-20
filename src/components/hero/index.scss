@@ -1,0 +1,22 @@
+.Hero {
+  position: relative;
+  height: 600px;
+  width: 100vw;
+
+  .hero-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .hero-text {
+    position: absolute;
+    top: 40%;
+    right: 20%;
+    font-size: 1.9rem;
+
+    p {
+      font-style: italic;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.Filter {
+  height: 120px;
+  display: flex;
+
+  .filter-area {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 10px;
+  }
+
+  .filter-btn {
+    color: rgb(172, 172, 172);
+    height: 30px;
+    padding: 8px 16px;
+    cursor: pointer;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .chosen-category {
+    color: white;
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .filter-area {
+    justify-content: center;
+  }
+}

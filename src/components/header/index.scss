@@ -1,0 +1,21 @@
+.Header {
+  position: fixed;
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  padding: 10px;
+
+  .header-logo {
+    width: 150px;
+  }
+  .header-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+  }
+}
