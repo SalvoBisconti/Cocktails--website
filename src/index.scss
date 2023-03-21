@@ -1,6 +1,5 @@
 @import "./styles/variables";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;700&display=swap");
 * {
   margin: 0;
   box-sizing: border-box;
@@ -9,5 +8,5 @@
 body {
   background-color: $primary-color;
   color: $secondary-color;
-  font-family: "Roboto", sans-serif;
+  font-family: "Edu NSW ACT Foundation", cursive;
 }

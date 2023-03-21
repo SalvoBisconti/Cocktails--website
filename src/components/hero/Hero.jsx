@@ -11,7 +11,7 @@ const Hero = () => {
       />
       <div className="hero-text">
         <h1> Cocktails</h1>
-        <p>drink responsibly</p>
+        <p>...drink responsibly</p>
       </div>
     </div>
   );

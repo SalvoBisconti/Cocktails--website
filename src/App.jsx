@@ -1,4 +1,5 @@
 import Content from "./components/content";
+import Footer from "./components/footer";
 import ItemDetails from "./components/itemDetails";
 import Header from "./components/header";
 import Hero from "./components/hero";
@@ -34,6 +35,7 @@ function App() {
           <Header scroll={scroll} />
           <Hero />
           <Content setGetItemDetails={setGetItemDetails} />
+          <Footer />
         </>
       )}
     </div>

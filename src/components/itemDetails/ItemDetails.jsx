@@ -20,7 +20,7 @@ const ItemDetails = ({ data, setGetItemDetails }) => {
         />
       </div>
       <div className="details-text">
-        <h3> {data.strDrink}</h3>
+        <h2> {data.strDrink}</h2>
 
         <div className="details-text-instructions">
           <h4>Preparation</h4>

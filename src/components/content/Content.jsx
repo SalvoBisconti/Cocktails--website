@@ -8,7 +8,7 @@ import { GET } from "../../utils/http";
 const Content = ({ setGetItemDetails }) => {
   const [cocktailsData, setCocktailsData] = useState([]);
   useEffect(() => {
-    GET("search.php?f=a").then(({ drinks }) => setCocktailsData(drinks));
+    GET("search.php?f=d").then(({ drinks }) => setCocktailsData(drinks));
   }, []);
   const [categoryFilter, setCategoryFilter] = useState("");
   const categoryArray = cocktailsData.map((element) => element.strCategory);

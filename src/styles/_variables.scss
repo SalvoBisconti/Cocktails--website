@@ -1,7 +1,13 @@
-// COLORS
+@font-face {
+  font-family: elegantFont;
+  src: url(/TheChamidPersonalUseOnly-J63a.ttf);
+}
 
+// COLORS
 $primary-color: #1a1a1a;
 $secondary-color: #e9e9e9;
 $content-color: rgb(219, 219, 219);
+$contrast-color: #1f1f1f;
 
-//SIZIES
+//FONT
+$title-font: "elegantFont", sans-serif;
