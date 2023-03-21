@@ -1,21 +1,27 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
 .Header {
+  @include flex-container(row, space-between, center);
   position: fixed;
   width: 100vw;
   height: 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgba(0, 0, 0);
-  z-index: 2;
+  background-color: transparent;
+  z-index: 3;
   padding: 10px;
+  transition: all 0.35s ease;
 
   .header-logo {
     width: 150px;
   }
   .header-list {
+    @include flex-container(row, space-evenly);
     list-style-type: none;
-    display: flex;
-    justify-content: space-evenly;
     width: 50%;
+    font-weight: bold;
+    font-size: 1.3rem;
   }
+}
+.scrolled-header {
+  background-color: $primary-color;
 }

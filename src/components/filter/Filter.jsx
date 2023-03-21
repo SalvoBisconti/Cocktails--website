@@ -8,15 +8,23 @@ const Filter = ({ filterCategory, setCategoryFilter, categoryFilter }) => {
     <div className="Filter">
       <div className="filter-area">
         {filterCategory.map((category) => (
-          <h3
-            key={filterCategory.length++}
-            className={`filter-btn ${
-              categoryFilter === category && "chosen-category"
-            } `}
-            onClick={() => onHandleFilter(category)}
-          >
-            {category}
-          </h3>
+          <>
+            <div
+              className={`filter-element ${
+                categoryFilter === category && "chosen-category"
+              } `}
+              onClick={() => onHandleFilter(category)}
+            >
+              <h3 className="filter-btn" key={filterCategory.length++}>
+                {category}
+              </h3>
+              <hr
+                className={`filter-line ${
+                  categoryFilter === category && "chosen-category-line"
+                } `}
+              />
+            </div>
+          </>
         ))}
       </div>
     </div>

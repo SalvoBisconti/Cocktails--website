@@ -1,11 +1,11 @@
 import CardList from "../cardList";
 import Filter from "../filter";
-import Card from "../card/Card";
+
 import "./index.scss";
 import { useState, useEffect } from "react";
 import { GET } from "../../utils/http";
 
-const Content = () => {
+const Content = ({ setGetItemDetails }) => {
   const [cocktailsData, setCocktailsData] = useState([]);
   useEffect(() => {
     GET("search.php?f=a").then(({ drinks }) => setCocktailsData(drinks));
@@ -16,14 +16,6 @@ const Content = () => {
     (category, index) => categoryArray.indexOf(category) === index
   );
 
-  //   const ingredientsArray = cocktailsData.filter(
-  //     (ingredient) => ingredient.strIngredient6 !== null
-  //   );
-
-  //   const a = cocktailsData.map((element) => {
-  //     if (element.strIngredient8 !== null) return element;
-  //   });
-
   return (
     <div className="Content">
       <Filter
@@ -31,7 +23,11 @@ const Content = () => {
         setCategoryFilter={setCategoryFilter}
         categoryFilter={categoryFilter}
       />
-      <CardList cocktailsData={cocktailsData} categoryFilter={categoryFilter} />
+      <CardList
+        cocktailsData={cocktailsData}
+        categoryFilter={categoryFilter}
+        setGetItemDetails={setGetItemDetails}
+      />
     </div>
   );
 };

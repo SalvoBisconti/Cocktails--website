@@ -1,36 +1,58 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
 .Filter {
-  height: 120px;
-  display: flex;
+  height: 130px;
+  @include flex-container(row, flex-start, center);
 
   .filter-area {
+    @include flex-container(row, flex-start, center);
     width: 100vw;
-    display: flex;
-    align-items: center;
     gap: 50px;
     overflow-x: scroll;
     overflow-y: hidden;
     padding: 10px;
-  }
 
-  .filter-btn {
-    color: rgb(172, 172, 172);
-    height: 30px;
-    padding: 8px 16px;
-    cursor: pointer;
+    .filter-element {
+      padding: 8px 16px;
+      cursor: pointer;
+      font-size: 1.2rem;
 
-    &:hover {
-      color: white;
+      .filter-btn {
+        color: $content-color;
+        padding: 2px 0;
+
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+      .filter-line {
+        width: 0;
+        transition: 0.35s;
+        border: none;
+      }
+      .chosen-category-line {
+        @include flex-container(row, flex-start, center);
+        width: 100%;
+        border: 1px solid;
+      }
     }
-  }
 
-  .chosen-category {
-    color: white;
-    font-size: 1.3rem;
+    .chosen-category {
+      color: $secondary-color;
+      font-size: 1.4rem;
+    }
   }
 }
 
 @media screen and (min-width: 800px) {
-  .filter-area {
-    justify-content: center;
+  .Filter {
+    height: 120px;
+    @include flex-container(row, center, center);
+
+    .filter-area {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
