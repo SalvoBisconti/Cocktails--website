@@ -1,5 +1,5 @@
 import "./index.scss";
-import { useState, useEffect, useRef } from "react";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const Header = ({ scroll }) => {
   return (
@@ -11,6 +11,7 @@ const Header = ({ scroll }) => {
         <li>About</li>
         <li>Order</li>
       </ul>
+      <RxHamburgerMenu className="hamburger-menu" />
     </div>
   );
 };

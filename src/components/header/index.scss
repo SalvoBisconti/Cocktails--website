@@ -11,17 +11,38 @@
   padding: 10px;
   transition: all 0.35s ease;
 
+  .hamburger-menu {
+    font-size: 1.6rem;
+    display: flex;
+    pointer-events: all;
+  }
+
   .header-logo {
     width: 150px;
   }
   .header-list {
-    @include flex-container(row, space-evenly);
-    list-style-type: none;
-    width: 50%;
-    font-weight: bold;
-    font-size: 1.3rem;
+    display: none;
+    pointer-events: all;
   }
 }
 .scrolled-header {
   background-color: $primary-color;
+}
+
+@media screen and (min-width: 800px) {
+  .Header {
+    .hamburger-menu {
+      font-size: 1.4rem;
+      display: none;
+      pointer-events: none;
+    }
+    .header-list {
+      @include flex-container(row, space-evenly);
+      pointer-events: all;
+      list-style-type: none;
+      width: 50%;
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+  }
 }
