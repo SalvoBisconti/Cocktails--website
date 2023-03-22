@@ -1,6 +1,7 @@
 import Content from "./components/content";
 import Footer from "./components/footer";
 import ItemDetails from "./components/itemDetails";
+import HamburgerMenu from "./components/hamburgerMenu";
 import Header from "./components/header";
 import Hero from "./components/hero";
 
@@ -19,12 +20,15 @@ function App() {
     itemData: {},
     isVisible: false,
   });
-  console.log(getItemDetails);
+  const [isHamburgerMenu, setIsHamburgerMenu] = useState(false);
   return (
     <div className="App">
       {getItemDetails.isVisible ? (
         <>
-          <Header scroll={scroll} />
+          <Header scroll={scroll} setIsHamburgerMenu={setIsHamburgerMenu} />
+          {isHamburgerMenu && (
+            <HamburgerMenu setIsHamburgerMenu={setIsHamburgerMenu} />
+          )}
           <ItemDetails
             data={getItemDetails.itemData}
             setGetItemDetails={setGetItemDetails}
@@ -32,7 +36,13 @@ function App() {
         </>
       ) : (
         <>
-          <Header scroll={scroll} />
+          <Header scroll={scroll} setIsHamburgerMenu={setIsHamburgerMenu} />
+
+          <HamburgerMenu
+            setIsHamburgerMenu={setIsHamburgerMenu}
+            isHamburgerMenu={isHamburgerMenu}
+          />
+
           <Hero />
           <Content setGetItemDetails={setGetItemDetails} />
           <Footer />

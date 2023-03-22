@@ -15,8 +15,11 @@
     font-size: 1.6rem;
     display: flex;
     pointer-events: all;
+    cursor: pointer;
   }
-
+  .hamburgerMenu:hover {
+    animation: flip-item 2.5s infinite;
+  }
   .logo {
     width: 150px;
   }
@@ -44,5 +47,14 @@
       font-weight: bold;
       font-size: 1.3rem;
     }
+  }
+}
+
+@keyframes flip-item {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.4);
   }
 }

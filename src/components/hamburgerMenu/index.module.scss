@@ -1,0 +1,82 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.HamburgerMenu {
+  @include flex-container(row);
+  position: fixed;
+  top: 0px;
+  right: -1000px;
+  height: 100vh;
+  width: 100vw;
+  z-index: 6;
+  transition: all 0.45s ease;
+
+  .overlay {
+    height: 100%;
+    width: 50%;
+    background-color: transparent;
+  }
+  .content {
+    @include flex-container(row);
+    height: 100%;
+    width: 50%;
+    background-color: $content-color;
+    color: $primary-color;
+    font-size: 1.8rem;
+    border-radius: 8px;
+
+    .listSection {
+      width: 80%;
+
+      .list {
+        list-style-type: none;
+        padding: 40px 0;
+        text-align: center;
+        cursor: pointer;
+      }
+      .list li:hover {
+        background-color: $primary-color;
+        color: $content-color;
+      }
+    }
+
+    .closeMenuSection {
+      @include flex-container(column, space-between, center);
+      height: 100%;
+      width: 20%;
+      background-color: $primary-color;
+      color: $content-color;
+      padding: 0px 10px;
+
+      .button {
+        border: none;
+        background-color: transparent;
+        font-size: 1.8rem;
+        color: $content-color;
+        padding: 20px 0;
+        cursor: pointer;
+      }
+      .button:hover {
+        animation: flip-item 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+      }
+      //   .rotateText {
+      //     transform: rotateX(190deg);
+      //     height: 200px;
+      //     width: 20px;
+      //   }
+    }
+  }
+}
+
+.show {
+  right: 0;
+}
+
+@keyframes flip-item {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
