@@ -12,3 +12,9 @@
   gap: $gap;
   flex-wrap: $wrap;
 }
+
+@mixin card-text-title($padding: 0px) {
+  padding: $padding;
+  font-style: normal;
+  color: $secondary-color;
+}

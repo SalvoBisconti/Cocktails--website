@@ -6,10 +6,13 @@
   position: absolute;
   top: 20%;
   right: calc(20% - 10vw);
-  height: 70vh;
+  height: auto;
   width: 80vw;
   border: 1px solid $secondary-color;
   border-radius: 8px;
+  font-style: italic;
+  color: $content-color;
+  background-color: $dark-primary-color;
 
   .details-image-section {
     height: 60%;
@@ -41,15 +44,23 @@
     width: 100%;
     height: 40%;
 
+    h2 {
+      @include card-text-title(5px);
+    }
+
     &-instructions {
       @include flex-container(column, space-between, center);
+
+      h4 {
+        @include card-text-title(5px);
+      }
     }
 
     &-ingredients {
       text-align: center;
       width: 100%;
       h4 {
-        padding: 5px;
+        @include card-text-title(5px);
       }
       &-list {
         @include flex-container(row, space-evenly, center);
@@ -62,6 +73,7 @@
 @media screen and (min-width: 800px) {
   .ItemDetails {
     @include flex-container(row);
+    height: 70vh;
     font-size: 1.2rem;
 
     .details-image-section {
