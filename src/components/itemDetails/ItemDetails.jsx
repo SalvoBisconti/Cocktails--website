@@ -10,7 +10,7 @@ const ItemDetails = ({ data, setGetItemDetails }) => {
     <div className={styles.ItemDetails}>
       <div className={styles.imageSection}>
         <button className={styles.button} onClick={onHandleCloseDetails}>
-          X
+          ⬅
         </button>
         <img
           src={data.strDrinkThumb}
