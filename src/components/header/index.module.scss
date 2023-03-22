@@ -26,6 +26,11 @@
   .list {
     display: none;
     pointer-events: all;
+    cursor: pointer;
+
+    li:hover {
+      animation: flip-item 2.5s infinite;
+    }
   }
 }
 .scrolledHeader {
