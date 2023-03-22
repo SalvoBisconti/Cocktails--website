@@ -1,9 +1,10 @@
 import Card from "../card/Card";
-import "./index.scss";
+import styles from "./index.module.scss";
+import "./index.module.scss";
 
 const CardList = ({ cocktailsData, categoryFilter, setGetItemDetails }) => {
   return (
-    <div className="CardList">
+    <div className={styles.CardList}>
       {!categoryFilter
         ? cocktailsData.map((cocktail) => (
             <Card

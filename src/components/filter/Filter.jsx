@@ -1,28 +1,29 @@
-import "./index.scss";
+import "./index.module.scss";
+import styles from "./index.module.scss";
 
 const Filter = ({ filterCategory, setCategoryFilter, categoryFilter }) => {
   const onHandleFilter = (category) => {
     setCategoryFilter(category);
   };
   return (
-    <div className="Filter">
-      <div className="filter-area">
+    <div className={styles.Filter}>
+      <div className={styles.content}>
         {filterCategory.map((category, i) => (
           <>
             <div
               key={filterCategory.length++}
-              className={`filter-element ${
-                categoryFilter === category && "chosen-category"
+              className={` ${styles.category} ${
+                categoryFilter === category && styles.chosenCategory
               } `}
               onClick={() => onHandleFilter(category)}
             >
-              <h3 className="filter-btn" key={filterCategory.length++}>
+              <h3 className={styles.name} key={filterCategory.length++}>
                 {category}
               </h3>
               <hr
                 key={filterCategory.length++}
-                className={`filter-line ${
-                  categoryFilter === category && "chosen-category-line"
+                className={` ${styles.underline} ${
+                  categoryFilter === category && styles.chosenUnderline
                 } `}
               />
             </div>

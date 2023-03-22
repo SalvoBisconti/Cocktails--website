@@ -14,11 +14,11 @@
   color: $content-color;
   background-color: $dark-primary-color;
 
-  .details-image-section {
+  .imageSection {
     height: 60%;
     width: 100%;
 
-    &-btn {
+    .button {
       position: absolute;
       top: 2%;
       left: 3%;
@@ -30,7 +30,7 @@
       cursor: pointer;
     }
 
-    .details-img {
+    .image {
       height: 100%;
       width: 100%;
       object-fit: cover;
@@ -38,7 +38,7 @@
       border-top-left-radius: 8px;
     }
   }
-  .details-text {
+  .text {
     @include flex-container(column, space-between, center);
     padding: 10px;
     width: 100%;
@@ -48,7 +48,7 @@
       @include card-text-title(5px);
     }
 
-    &-instructions {
+    .instruction {
       @include flex-container(column, space-between, center);
 
       h4 {
@@ -56,13 +56,13 @@
       }
     }
 
-    &-ingredients {
+    .ingredients {
       text-align: center;
       width: 100%;
       h4 {
         @include card-text-title(5px);
       }
-      &-list {
+      .ingredientsList {
         @include flex-container(row, space-evenly, center);
         list-style-type: none;
       }
@@ -76,17 +76,17 @@
     height: 70vh;
     font-size: 1.2rem;
 
-    .details-image-section {
+    .imageSection {
       height: 100%;
 
-      &-btn {
+      .button {
         position: absolute;
         top: 2%;
         left: 2%;
         padding: 2%;
       }
     }
-    .details-text {
+    .text {
       @include flex-container(column, space-evenly, center);
       padding: 25px;
       width: 100%;

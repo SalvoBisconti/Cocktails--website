@@ -11,32 +11,32 @@
   padding: 10px 25px;
   transition: all 0.35s ease;
 
-  .hamburger-menu {
+  .hamburgerMenu {
     font-size: 1.6rem;
     display: flex;
     pointer-events: all;
   }
 
-  .header-logo {
+  .logo {
     width: 150px;
   }
-  .header-list {
+  .list {
     display: none;
     pointer-events: all;
   }
 }
-.scrolled-header {
+.scrolledHeader {
   background-color: $contrast-color;
 }
 
 @media screen and (min-width: 800px) {
   .Header {
-    .hamburger-menu {
+    .hamburgerMenu {
       font-size: 1.4rem;
       display: none;
       pointer-events: none;
     }
-    .header-list {
+    .list {
       @include flex-container(row, space-evenly);
       pointer-events: all;
       list-style-type: none;

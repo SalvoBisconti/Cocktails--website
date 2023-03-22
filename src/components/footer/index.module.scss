@@ -11,23 +11,23 @@
   padding: 15px 0;
   border-top: 0.5px solid $secondary-color;
 
-  .top-footer {
+  .topSection {
     @include flex-container(column, center, center, 20px);
     padding: 0px 20px;
     width: 100%;
   }
 
-  .footer-logo {
+  .logo {
     width: 150px;
   }
 
-  .footer-list {
+  .list {
     @include flex-container(row, space-evenly, center);
     width: 100%;
     list-style-type: none;
   }
 
-  .bottom-footer {
+  .bottomSection {
     @include flex-container(row, center, center);
     width: 100vw;
     height: 50px;

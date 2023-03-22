@@ -1,11 +1,12 @@
-import "./index.scss";
+import "./index.module.scss";
+import styles from "./index.module.scss";
 
 const Footer = () => {
   return (
-    <div className="Footer">
-      <div className="top-footer">
-        <img src="/logo.png" alt="logo" className="footer-logo" />
-        <ul className="footer-list">
+    <div className={styles.Footer}>
+      <div className={styles.topSection}>
+        <img src="/logo.png" alt="logo" className={styles.logo} />
+        <ul className={styles.list}>
           <li>About us</li>
           <li>Concacts</li>
           <li>Policy</li>
@@ -13,7 +14,7 @@ const Footer = () => {
         </ul>
       </div>
 
-      <div className="bottom-footer">
+      <div className={styles.bottomSection}>
         <p>Created by Salvo Bisconti. © All rights reserved</p>
       </div>
     </div>

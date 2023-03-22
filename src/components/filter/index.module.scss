@@ -5,7 +5,7 @@
   height: 130px;
   @include flex-container(row, flex-start, center);
 
-  .filter-area {
+  .content {
     @include flex-container(row, flex-start, center);
     width: 100vw;
     gap: 50px;
@@ -13,38 +13,37 @@
     overflow-y: hidden;
     padding: 10px;
 
-    &::-webkit-scrollbar {
-      display: none;
-    }
-    .filter-element {
+    .category {
       padding: 8px 16px;
       font-size: 1.2rem;
 
-      .filter-btn {
+      .name {
         color: $content-color;
         padding: 2px 0;
         cursor: pointer;
-
-        &:hover {
-          color: $secondary-color;
-        }
       }
-      .filter-line {
+      .name:hover {
+        color: $secondary-color;
+      }
+      .underline {
         width: 0;
         transition: 0.35s;
         border: none;
       }
-      .chosen-category-line {
+      .chosenUnderline {
         @include flex-container(row, flex-start, center);
         width: 100%;
         border: 1px solid;
       }
     }
 
-    .chosen-category {
+    .chosenCategory {
       color: $secondary-color;
       font-size: 1.4rem;
     }
+  }
+  .content::-webkit-scrollbar {
+    display: none;
   }
 }
 
