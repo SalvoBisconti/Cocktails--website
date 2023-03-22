@@ -1,4 +1,5 @@
 import "./index.scss";
+import { ingredientArrayPopolation } from "../../utils/functions";
 
 const ItemDetails = ({ data, setGetItemDetails }) => {
   const onHandleCloseDetails = () => {
@@ -30,9 +31,12 @@ const ItemDetails = ({ data, setGetItemDetails }) => {
         <div className="details-text-ingredients">
           <h4>Ingredients</h4>
           <ul className="details-text-ingredients-list">
-            <li>{data.strIngredient1}</li>
-            <li>{data.strIngredient2}</li>
-            <li>{data.strIngredient3}</li>
+            {console.log(ingredientArrayPopolation(data))}
+            {ingredientArrayPopolation(data).map((ingredient, i) => (
+              <li key={i} className="card-ingredients">
+                {ingredient}
+              </li>
+            ))}
           </ul>
         </div>
       </div>

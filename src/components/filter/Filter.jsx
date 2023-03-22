@@ -7,9 +7,10 @@ const Filter = ({ filterCategory, setCategoryFilter, categoryFilter }) => {
   return (
     <div className="Filter">
       <div className="filter-area">
-        {filterCategory.map((category) => (
+        {filterCategory.map((category, i) => (
           <>
             <div
+              key={filterCategory.length++}
               className={`filter-element ${
                 categoryFilter === category && "chosen-category"
               } `}
@@ -19,6 +20,7 @@ const Filter = ({ filterCategory, setCategoryFilter, categoryFilter }) => {
                 {category}
               </h3>
               <hr
+                key={filterCategory.length++}
                 className={`filter-line ${
                   categoryFilter === category && "chosen-category-line"
                 } `}
