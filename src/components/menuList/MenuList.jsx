@@ -1,9 +1,9 @@
 import "./index.module.scss";
 import styles from "./index.module.scss";
 
-const MenuList = () => {
+const MenuList = ({ listClass }) => {
   return (
-    <ul className={styles.MenuList}>
+    <ul className={listClass}>
       <li>Menù</li>
       <li>Reviews</li>
       <li>About</li>

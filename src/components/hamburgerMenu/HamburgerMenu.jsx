@@ -13,12 +13,7 @@ const HamburgerMenu = ({ isHamburgerMenu, setIsHamburgerMenu }) => {
       <div className={styles.overlay} onClick={onHandleCloseMenu}></div>
       <div className={styles.content}>
         <div className={styles.listSection}>
-          <ul className={styles.list}>
-            <li>Menù</li>
-            <li>Reviews</li>
-            <li>About</li>
-            <li>Order</li>
-          </ul>
+          <MenuList listClass={styles.list} />
         </div>
         <div className={styles.closeMenuSection}>
           <button className={styles.button} onClick={onHandleCloseMenu}>

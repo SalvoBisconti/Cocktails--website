@@ -1,5 +1,6 @@
 import "./index.module.scss";
 import { ingredientArrayPopolation } from "../../utils/functions";
+import { BsFillArrowLeftSquareFill } from "react-icons/bs";
 import styles from "./index.module.scss";
 
 const ItemDetails = ({ data, setGetItemDetails }) => {
@@ -9,9 +10,13 @@ const ItemDetails = ({ data, setGetItemDetails }) => {
   return (
     <div className={styles.ItemDetails}>
       <div className={styles.imageSection}>
-        <button className={styles.button} onClick={onHandleCloseDetails}>
+        <BsFillArrowLeftSquareFill
+          className={styles.button}
+          onClick={onHandleCloseDetails}
+        />
+        {/* <button className={styles.button} onClick={onHandleCloseDetails}>
           ⬅
-        </button>
+        </button> */}
         <img
           src={data.strDrinkThumb}
           alt={data.strDrink}

@@ -2,12 +2,11 @@
 @import "../../styles/mixins";
 
 .Filter {
-  height: 130px;
   @include flex-container(row, flex-start, center);
 
   .content {
     @include flex-container(row, flex-start, center);
-    width: 100vw;
+
     gap: 50px;
     overflow-x: scroll;
     overflow-y: hidden;

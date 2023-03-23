@@ -2,13 +2,12 @@
 
 .Card {
   margin: 50px;
-
   height: 300px;
   width: 230px;
-
   cursor: pointer;
   background-color: transparent;
   perspective: 1000px;
+  box-shadow: 0px 15px 10px -15px$content-color;
 
   .flipbox {
     position: relative;

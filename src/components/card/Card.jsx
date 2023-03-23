@@ -27,7 +27,6 @@ const Card = ({ data, setGetItemDetails }) => {
           <h3 className={styles.retroTitle}>Ingredients</h3>
 
           <ul className={styles.ingredientsList}>
-            {console.log(ingredientArrayPopolation(data))}
             {ingredientArrayPopolation(data).map((ingredient, i) => (
               <li key={i}>{ingredient}</li>
             ))}

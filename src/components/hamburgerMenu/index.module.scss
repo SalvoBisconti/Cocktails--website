@@ -13,13 +13,13 @@
 
   .overlay {
     height: 100%;
-    width: 50%;
+    width: 40%;
     background-color: transparent;
   }
   .content {
     @include flex-container(row);
     height: 100%;
-    width: 50%;
+    width: 60%;
     background-color: $content-color;
     color: $primary-color;
     font-size: 1.8rem;

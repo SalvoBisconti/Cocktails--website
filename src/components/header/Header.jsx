@@ -9,13 +9,7 @@ const Header = ({ scroll, setIsHamburgerMenu }) => {
   return (
     <div className={`${styles.Header} ${scroll && styles.scrolledHeader}`}>
       <img src="/logo.png" alt="logo" className={styles.logo} />
-      {/* <MenuList className={styles.list} /> */}
-      <ul className={styles.list}>
-        <li>Menù</li>
-        <li>Reviews</li>
-        <li>About</li>
-        <li>Order</li>
-      </ul>
+      <MenuList listClass={styles.list} />
       <RxHamburgerMenu
         className={styles.hamburgerMenu}
         onClick={onHandleOpenMenu}

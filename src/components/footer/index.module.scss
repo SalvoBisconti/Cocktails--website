@@ -4,16 +4,17 @@
 .Footer {
   @include flex-container(column, flex-start, flex-start, 20px);
   width: 100vw;
-  height: 160px;
+  height: 200px;
   background-color: $contrast-color;
   color: $secondary-color;
   font-size: 1.1rem;
-  padding: 15px 0;
+
   border-top: 0.5px solid $secondary-color;
 
   .topSection {
     @include flex-container(column, center, center, 20px);
     padding: 0px 20px;
+    height: 70%;
     width: 100%;
   }
 
@@ -30,7 +31,7 @@
   .bottomSection {
     @include flex-container(row, center, center);
     width: 100vw;
-    height: 50px;
+    height: 30%;
     bottom: 0;
     padding: 10px;
     background-color: $primary-color;

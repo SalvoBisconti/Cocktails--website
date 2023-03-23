@@ -1,0 +1,11 @@
+@import "../../styles/variables";
+
+.title {
+  font-size: 2rem;
+  padding: 50px 20px 15px 20px;
+  font-family: $title-font;
+}
+
+hr {
+  border: 0.5px solid $content-color;
+}
