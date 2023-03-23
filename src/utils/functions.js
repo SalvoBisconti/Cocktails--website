@@ -9,8 +9,9 @@ export const ingredientArrayPopolation = (cocktailsData) => {
   return ingredientsArray;
 };
 
-export const takeDate = (data) => {
-  let date = data.date.split("-");
-
-  return date;
-};
+// export const takeDate = (data) => {
+//   let firstDate = data.date.split("-");
+//   let day = firstDate[2].split("T");
+//   const prenotationHour = day[1];
+//   return prenotationHour;
+// };

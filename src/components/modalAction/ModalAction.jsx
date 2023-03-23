@@ -19,7 +19,7 @@ const ModalAction = ({
       email: email,
       date: date,
     });
-    console.log(dataPrenotation);
+    setIsPresentationModal((prev) => !prev);
   };
 
   const onHandleInputName = (e) => setName(e.target.value);

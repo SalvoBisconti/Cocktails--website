@@ -7,6 +7,7 @@ import Hero from "./components/hero";
 import ModalAction from "./components/modalAction";
 import Popup from "./components/popup";
 
+// import { takeDate } from "./utils/functions";
 import { useState, useEffect } from "react";
 import "./App.scss";
 
@@ -50,7 +51,6 @@ function App() {
       {isPopup && (
         <Popup>
           <h3>Table prenoteded</h3>
-          <p>Day: {dataPrenotation.date.split("-").reverse().join}</p>
         </Popup>
       )}
       {console.log()}
