@@ -2,10 +2,19 @@ import styles from "./index.module.scss";
 import "./index.module.scss";
 import MenuList from "../menuList";
 
-const HamburgerMenu = ({ isHamburgerMenu, setIsHamburgerMenu }) => {
+const HamburgerMenu = ({
+  isHamburgerMenu,
+  setIsHamburgerMenu,
+  setIsPresentationModal,
+}) => {
   const onHandleCloseMenu = () => {
     setIsHamburgerMenu(false);
   };
+  const onHandleReservation = () => {
+    setIsPresentationModal((prev) => !prev);
+    setIsHamburgerMenu((prev) => !prev);
+  };
+
   return (
     <div
       className={` ${styles.HamburgerMenu} ${isHamburgerMenu && styles.show}`}
@@ -13,7 +22,11 @@ const HamburgerMenu = ({ isHamburgerMenu, setIsHamburgerMenu }) => {
       <div className={styles.overlay} onClick={onHandleCloseMenu}></div>
       <div className={styles.content}>
         <div className={styles.listSection}>
-          <MenuList listClass={styles.list} />
+          <MenuList
+            listClass={styles.list}
+            prenote={styles.prenoteBtn}
+            func={onHandleReservation}
+          />
         </div>
         <div className={styles.closeMenuSection}>
           <button className={styles.button} onClick={onHandleCloseMenu}>

@@ -14,9 +14,6 @@ const ItemDetails = ({ data, setGetItemDetails }) => {
           className={styles.button}
           onClick={onHandleCloseDetails}
         />
-        {/* <button className={styles.button} onClick={onHandleCloseDetails}>
-          ⬅
-        </button> */}
         <img
           src={data.strDrinkThumb}
           alt={data.strDrink}

@@ -4,6 +4,8 @@ import ItemDetails from "./components/itemDetails";
 import HamburgerMenu from "./components/hamburgerMenu";
 import Header from "./components/header";
 import Hero from "./components/hero";
+import ModalAction from "./components/modalAction";
+import Popup from "./components/popup";
 
 import { useState, useEffect } from "react";
 import "./App.scss";
@@ -21,13 +23,45 @@ function App() {
     isVisible: false,
   });
   const [isHamburgerMenu, setIsHamburgerMenu] = useState(false);
+  const [isPrenotationModal, setIsPresentationModal] = useState(false);
+  const [isPopup, setIsPopup] = useState(false);
+  const [dataPrenotation, setDataPrenotation] = useState({
+    name: "",
+    email: "",
+    date: "",
+  });
+
   return (
     <div className="App">
+      <Header
+        scroll={scroll}
+        setIsHamburgerMenu={setIsHamburgerMenu}
+        setIsPresentationModal={setIsPresentationModal}
+      />
+      {isPrenotationModal && (
+        <ModalAction
+          setIsPresentationModal={setIsPresentationModal}
+          setIsPopup={setIsPopup}
+          dataPrenotation={dataPrenotation}
+          setDataPrenotation={setDataPrenotation}
+        />
+      )}
+
+      {isPopup && (
+        <Popup>
+          <h3>Table prenoteded</h3>
+          <p>Day: {dataPrenotation.date.split("-").reverse().join}</p>
+        </Popup>
+      )}
+      {console.log()}
       {getItemDetails.isVisible ? (
         <>
-          <Header scroll={scroll} setIsHamburgerMenu={setIsHamburgerMenu} />
           {isHamburgerMenu && (
-            <HamburgerMenu setIsHamburgerMenu={setIsHamburgerMenu} />
+            <HamburgerMenu
+              setIsHamburgerMenu={setIsHamburgerMenu}
+              isHamburgerMenu={isHamburgerMenu}
+              setIsPresentationModal={setIsPresentationModal}
+            />
           )}
           <ItemDetails
             data={getItemDetails.itemData}
@@ -36,11 +70,10 @@ function App() {
         </>
       ) : (
         <>
-          <Header scroll={scroll} setIsHamburgerMenu={setIsHamburgerMenu} />
-
           <HamburgerMenu
             setIsHamburgerMenu={setIsHamburgerMenu}
             isHamburgerMenu={isHamburgerMenu}
+            setIsPresentationModal={setIsPresentationModal}
           />
 
           <Hero />

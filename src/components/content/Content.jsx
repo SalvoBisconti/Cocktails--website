@@ -25,7 +25,7 @@ const Content = ({ setGetItemDetails }) => {
   return (
     <div className={styles.Content}>
       <h2 className={styles.title}>Discover the fantastic world of beverage</h2>
-      <hr />
+      <hr className={styles.line} />
       <CategorySelect
         categoryLetter={categoryLetter}
         setCategoryLetter={setCategoryLetter}

@@ -38,6 +38,13 @@
         background-color: $primary-color;
         color: $content-color;
       }
+      .prenoteBtn {
+        margin-top: 50px;
+        border: 2px solid $primary-color;
+        border-radius: 12px;
+        margin-left: 20%;
+        width: 60%;
+      }
     }
 
     .closeMenuSection {
@@ -59,11 +66,6 @@
       .button:hover {
         animation: flip-item 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
       }
-      //   .rotateText {
-      //     transform: rotateX(190deg);
-      //     height: 200px;
-      //     width: 20px;
-      //   }
     }
   }
 }

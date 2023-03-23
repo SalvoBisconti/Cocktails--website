@@ -1,0 +1,18 @@
+@import "../../styles/variables";
+
+.Popup {
+  position: fixed;
+  top: 80px;
+  right: calc(50vw - 100px);
+  width: 200px;
+  background-color: $primary-color;
+  z-index: 6;
+  border-radius: 12px;
+  padding: 8px 16px;
+  box-shadow: 0 0 1px $secondary-color;
+
+  .text {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+}

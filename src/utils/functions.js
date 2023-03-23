@@ -8,3 +8,9 @@ export const ingredientArrayPopolation = (cocktailsData) => {
   }
   return ingredientsArray;
 };
+
+export const takeDate = (data) => {
+  let date = data.date.split("-");
+
+  return date;
+};
