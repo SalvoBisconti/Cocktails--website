@@ -7,7 +7,7 @@ import Hero from "./components/hero";
 import ModalAction from "./components/modalAction";
 import Popup from "./components/popup";
 
-// import { takeDate } from "./utils/functions";
+import { takeDate } from "./utils/functions";
 import { useState, useEffect } from "react";
 import "./App.scss";
 
@@ -50,7 +50,10 @@ function App() {
 
       {isPopup && (
         <Popup>
-          <h3>Table prenoteded</h3>
+          <h3 className="popupText">Table prenoteded</h3>
+          <p className="popupText">
+            Mr./mrs. {dataPrenotation.name} we expect you soon
+          </p>
         </Popup>
       )}
       {console.log()}
