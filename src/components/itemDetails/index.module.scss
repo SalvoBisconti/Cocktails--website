@@ -1,6 +1,3 @@
-@import "../../styles/variables";
-@import "../../styles/mixins";
-
 .ItemDetails {
   @include flex-container(column);
   position: absolute;
@@ -30,7 +27,7 @@
       cursor: pointer;
     }
     .button:hover {
-      animation: flip-item 2.5s infinite;
+      animation: flip-item $slowAnimation infinite;
     }
 
     .image {

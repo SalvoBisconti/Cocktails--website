@@ -1,6 +1,3 @@
-@import "../../styles/variables";
-@import "../../styles/mixins";
-
 .Content {
   @include flex-container(column, center, center);
   .title {

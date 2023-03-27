@@ -1,5 +1,3 @@
-@import "../../styles/mixins";
-
 .CardList {
   @include flex-container(row, center, flex-start, 0px, wrap);
   padding: 20px;

@@ -1,6 +1,3 @@
-@import "../../styles/variables";
-@import "../../styles/mixins";
-
 .Footer {
   @include flex-container(column, flex-start, flex-start, 20px);
   width: 100vw;

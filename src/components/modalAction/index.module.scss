@@ -1,6 +1,3 @@
-@import "../../styles/variables";
-@import "../../styles/mixins";
-
 .ModalAction {
   @include flex-container(column);
   position: fixed;

@@ -1,6 +1,3 @@
-@import "../../styles/variables";
-@import "../../styles/mixins";
-
 .HamburgerMenu {
   @include flex-container(row);
   position: fixed;
