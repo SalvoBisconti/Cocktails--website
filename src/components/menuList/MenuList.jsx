@@ -1,4 +1,3 @@
-import "./index.module.scss";
 import styles from "./index.module.scss";
 
 const MenuList = ({ listClass, prenote, func }) => {

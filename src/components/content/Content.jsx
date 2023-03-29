@@ -5,7 +5,6 @@ import Filter from "../filter";
 import styles from "./index.module.scss";
 import { useState, useEffect } from "react";
 import { GET } from "../../utils/http";
-import "./index.module.scss";
 
 const Content = ({ setGetItemDetails }) => {
   const [categoryLetter, setCategoryLetter] = useState("A");

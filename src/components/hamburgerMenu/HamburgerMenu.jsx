@@ -1,5 +1,4 @@
 import styles from "./index.module.scss";
-import "./index.module.scss";
 import MenuList from "../menuList";
 
 const HamburgerMenu = ({

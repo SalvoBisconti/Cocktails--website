@@ -1,4 +1,3 @@
-import "./index.module.scss";
 import { RxHamburgerMenu } from "react-icons/rx";
 import styles from "./index.module.scss";
 import MenuList from "../menuList";

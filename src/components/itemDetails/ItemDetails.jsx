@@ -1,4 +1,3 @@
-import "./index.module.scss";
 import { ingredientArrayPopolation } from "../../utils/functions";
 import { BsFillArrowLeftSquareFill } from "react-icons/bs";
 import styles from "./index.module.scss";

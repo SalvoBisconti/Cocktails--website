@@ -1,6 +1,5 @@
 import Card from "../card/Card";
 import styles from "./index.module.scss";
-import "./index.module.scss";
 
 const CardList = ({ cocktailsData, categoryFilter, setGetItemDetails }) => {
   return (

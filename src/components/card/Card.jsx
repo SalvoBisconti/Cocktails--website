@@ -1,6 +1,5 @@
 import styles from "./index.module.scss";
 import { ingredientArrayPopolation } from "../../utils/functions";
-import "./index.module.scss";
 
 const Card = ({ data, setGetItemDetails }) => {
   const onHandleDetails = () =>

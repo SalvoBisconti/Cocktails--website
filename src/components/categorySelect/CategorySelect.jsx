@@ -1,5 +1,4 @@
 import styles from "./index.module.scss";
-import "./index.module.scss";
 
 const CategorySelect = ({ setCategoryLetter }) => {
   const alphabetsArray = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
