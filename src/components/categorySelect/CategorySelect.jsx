@@ -10,7 +10,7 @@ const CategorySelect = ({ setCategoryLetter }) => {
   return (
     <div className={styles.CategorySelect}>
       <div className={styles.content}>
-        <h3>Choose the initilal cocktail's letter</h3>
+        <h3>Cocktails starting with</h3>
         <div className={styles.inputEl}>
           <form>
             <select

@@ -15,7 +15,7 @@
     cursor: pointer;
   }
   .hamburgerMenu:hover {
-    animation: flip-item 2.5s infinite;
+    animation: flip-item 2.5s forwards;
   }
   .logo {
     width: 150px;
